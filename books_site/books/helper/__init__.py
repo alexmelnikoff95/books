@@ -1,1 +1,0 @@
-from .helper_view import IsStaffPerm
