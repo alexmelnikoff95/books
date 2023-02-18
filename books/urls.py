@@ -1,7 +1,6 @@
 from django.urls import path
 
-from books.views.auth import AuthView, BackOutView, PasswordResizeView, RegisterView
-from books.views.views import IndexView
+from books.views import IndexView, AuthView, BackOutView, PasswordResizeView, RegisterView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
