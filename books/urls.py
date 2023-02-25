@@ -1,7 +1,12 @@
 from django.urls import path
 
+<<<<<<< HEAD
 from books.views import IndexView, AuthView, BackOutView, PasswordResizeView, RegisterView, ArtistListView, \
     ArtistDetailView
+=======
+from books.views.auth import AuthView, BackOutView, PasswordResizeView, RegisterView
+from books.views.views import IndexView
+>>>>>>> parent of 01903ff (task_2 Создание и написание миграции.)
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
