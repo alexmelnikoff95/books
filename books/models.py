@@ -1,12 +1,15 @@
 from django.db import models
+from django.urls import reverse
 
 
-# Create your models here.
 class Artist(models.Model):
     first_name = models.CharField('имя', max_length=255)
     last_name = models.CharField('фамилия', max_length=255)
     role = models.CharField('роль', max_length=255, blank=True)
-    data_birth = models.DateField('дата рождения', blank=True, default='2000-11-11' )
+    data_birth = models.DateField('дата рождения', blank=True, default='2000-11-11')
+
+    def get_absolute_url(self):
+        return reverse('artist_detail', kwargs={'pk': self.pk})
 
     class Meta:
         verbose_name = 'Артист'
