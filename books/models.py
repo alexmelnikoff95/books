@@ -19,6 +19,7 @@ class Artist(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 
+
 class Band(models.Model):
     name = models.CharField('название группы', max_length=255)
     artist = models.ManyToManyField(Artist, verbose_name='музыкант')
