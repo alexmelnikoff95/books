@@ -25,4 +25,4 @@ class Band(models.Model):
     artist = models.ManyToManyField(Artist, verbose_name='музыкант')
 
     def __str__(self):
-        return f'{self.name}'
+        return self.name
