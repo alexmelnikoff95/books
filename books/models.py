@@ -28,4 +28,4 @@ class Band(models.Model):
         verbose_name_plural = 'Группы'
 
     def __str__(self):
-        return self.name
+        return f'{self.name}'
